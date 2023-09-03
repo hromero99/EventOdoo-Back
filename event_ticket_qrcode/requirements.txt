@@ -1,0 +1,2 @@
+qrcode==6.1
+qrcodegen==1.8.0

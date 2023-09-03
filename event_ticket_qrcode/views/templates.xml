@@ -1,0 +1,31 @@
+<odoo>
+    <data>
+    <template id="event_registration_qr" inherit_id="website_event.registration_complete">
+      <xpath expr="//div" position="inside">
+        <t t-foreach="attendees" t-as="attendee">
+              <img t-att-src="'data:image/png;base64,%s' % attendee.qr_img64"/>
+        </t>
+      </xpath>
+    </template>
+<!--
+        <template id="listing">
+          <ul>
+            <li t-foreach="objects" t-as="object">
+              <a t-attf-href="#{ root }/objects/#{ object.id }">
+                <t t-esc="object.display_name"/>
+              </a>
+            </li>
+          </ul>
+        </template>
+        <template id="object">
+          <h1><t t-esc="object.display_name"/></h1>
+          <dl>
+            <t t-foreach="object._fields" t-as="field">
+              <dt><t t-esc="field"/></dt>
+              <dd><t t-esc="object[field]"/></dd>
+            </t>
+          </dl>
+        </template>
+-->
+    </data>
+</odoo>
